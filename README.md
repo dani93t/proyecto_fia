@@ -23,5 +23,9 @@ o si Python está guardado en PATH, ejecutar
 ```bash
 fia.py
 ```
+
+## Registro de cambios
+* (15-03-2021) - optimización de código
+
 ## Referencias
 * Zanaty, E. A. (2018). A Novel Metaheuristic Algorithm based on Fibonacci Sequence. IJCSNS, 18(4), 44.
