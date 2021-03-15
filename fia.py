@@ -11,11 +11,11 @@ from metaheuristica import *
 
 MaxIteraciones=100	#número de iteraciones
 Particulas=50		#numero de partículas
-a=1			#parámetro a
+a=1					#parámetro a
 b=1					#parámetro b
 c=1					#parámetro c
 theta=0				#parámetro theta
-seed=-1				#parámetro semilla
+seed=711			#parámetro semilla
 k=1
 solucionOptima=0
 
@@ -59,14 +59,14 @@ def main():
 	instancias=listdir("BoctorProblem_90_instancias/")
 	contador_optimo=0
 	for i in range(len(instancias)):
-		print("instancia ",(i+1))
+		print("\n\ninstancia ",(i+1))
 		inicio=time()
 		instancia = Instancia(instancias[i])	#crear instancia a partir del archivo
 		objetos=Soluciones(instancia)			#generar soluciones en base de la instancia
 		inst=Metaheuristica(instancia,objetos) 	#en metaehuristica pasar cuadro y las soluciones
 		final=time()
 		tiempo=final-inicio
-		print("solucion final:", inst.Xglobal[1],"\n\n")
+		print("solucion final:", inst.Xglobal[1],"\tEn",tiempo,"segundos")
 		if inst.Xglobal[1]==instancia.Bsol:
 			contador_optimo+=1	
 		else:

@@ -18,9 +18,9 @@ class Soluciones(object):	#clase donde guarda la solucion
 	def trabajo(self): # método donde genera las matrices MxC y PxC aleatorias para generar solucion
 		A=self.instancia.Matrix
 		restriccion=False
-		while restriccion==False:	
+		while restriccion==False:
 			Yuniforme=np.random.uniform(size=self.instancia.Machines) #inicializa las variables de manera uniforme
-			Zuniforme=np.random.uniform(size=self.instancia.Parts) #inicializa las variables de manera uniforme
+			# Zuniforme=np.random.uniform(size=self.instancia.Parts) #inicializa las variables de manera uniforme
 			Y=self.transformar(Yuniforme) 	# Trasnforma las matrices de continua a discreta segun las celdas
 			Z=self.crearZ(A,Y)	# Trasnforma las matrices de continua a discreta segun las celdas
 			restriccion=self.probar_restriccion(Y) # llama a verificar factibilidad de la funcion

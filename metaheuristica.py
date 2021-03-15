@@ -15,20 +15,24 @@ class Metaheuristica(object):   #clase donde realiza las tareas de la metaehuris
 		self.solucion = solucion 	#solucion/es inicales para particulas
 		self.v = self.generarV()	#generar aleatoriamente v
 		p=solucion.S.index(min(self.solucion.S)) # conseguir indice , puntero sol
-		self.Xbest=np.array((np.copy(self.solucion.Y[p]),np.copy(self.solucion.S[p])))				#mejor solucion del grupo actual hay q copiar
-		self.Xglobal=np.array((np.copy(self.solucion.Y[p]),np.copy(self.solucion.S[p])))			#mejor solucion global 															
+		# #self.Xbest=np.array((np.copy(self.solucion.Y[p]),np.copy(self.solucion.S[p])))				#mejor solucion del grupo actual hay q copiar
+		# #self.Xglobal=np.array((np.copy(self.solucion.Y[p]),np.copy(self.solucion.S[p])))			#mejor solucion global 															
+		self.Xbest=np.array((self.solucion.Y[p],self.solucion.S[p]))
+		self.Xglobal=np.copy(self.Xbest)
 		self.mejorAleatoria=self.Xbest[1]
 		self.algoritmo()
 
 	def generarV(self): #inicializar velocidad una matriz del mismo tamaño q la mxp
-		obj=[]
-		for i in range (Particulas):
-			obj.append(np.array(( 2*np.random.random(self.instancia.Machines)-1)))
-		return np.array(obj)
+		obj = 2*np.random.random((Particulas,self.instancia.Machines))-1
+		return obj
+		# obj=[]
+		# for i in range (Particulas):
+		# 	obj.append(np.array(( 2*np.random.random(self.instancia.Machines)-1)))
+		# return np.array(obj)
 		
 	def algoritmo(self): #funcion que realiza las iteraciones de la metaehuristica
-		rangoTheta=100
-		sinTheta=0
+		# rangoTheta=100
+		# sinTheta=0
 		for p in range (Particulas):  #inicializa partículas 
 			paso=False
 			intentos=0
