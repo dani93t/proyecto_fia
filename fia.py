@@ -12,15 +12,6 @@ from metaheuristica import *
 import argparse
 from jproperties import Properties # para leer las propiedades
 
-MaxIteraciones=100	#número de iteraciones
-Particulas=50		#numero de partículas
-a=1					#parámetro a
-b=1					#parámetro b
-c=1					#parámetro c
-theta=0				#parámetro theta
-seed=711			#parámetro semilla
-k=1
-solucionOptima=0
 
 class Instancia(object):
 	"""docstring for Instancia"""
@@ -62,8 +53,8 @@ def main(parametros):
 		inst = Metaheuristica(instancia, objetos, parametros) 				#en metaehuristica pasar cuadro y las soluciones
 		final=time()
 		tiempo=final-inicio
-		print("solucion final:", inst.Xglobal[1],"\tEn",tiempo,"segundos")
-		if inst.Xglobal[1]==instancia.bSol:
+		print("solucion final:", inst.xGlobal[1],"\tEn",tiempo,"segundos")
+		if inst.xGlobal[1]==instancia.bSol:
 			contador_optimo+=1	
 		else:
 			print("no se encontro optimo")

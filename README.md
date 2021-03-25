@@ -14,8 +14,8 @@ Python 3.6 (probado con python 3.8)
 ```bash
 git clone http://github.com/dani93t/proyecto_fia
 ```
-2. ejecutar el programa
 
+2. ejecutar el programa
 ```bash
 python fia.py
 ```
@@ -24,8 +24,24 @@ o si Python está guardado en PATH, ejecutar
 fia.py
 ```
 
+### Parámetros
+
+| parámetro | alias | descripción | valor por defecto |
+| --------- | --------- | --------- | --------- |
+| **-a** | **-a** | parámetro a | 1 |
+| **-b** | **-b** | parámetro b | 1 |
+| **-c** | **-c** | parámetro c | 1 |
+| **-k** | **-k** | parámetro k | 0 |
+| **--semilla** | **-s** | semilla inicial de simulación | tiempo actual |
+| **--particulas** | **-p** | número de partículas de simulación | 50 |
+| **--iteraciones** | **-i** | número de iteraciones de simulación | 100 |
+| **--rutas** | **-r** | especifica ruta/directorio/archivos a cargar al sistema | "./BoctorProblem_90_instancias" |
+
+
 ## Registro de cambios
-* (15-03-2021) - optimización de código
+* (15-03-2021) - optimización de código.
+* (23-03-2021) - implementación de parámetros y mejoras menores.
+* (25-03-2021) - correcciones de código.
 
 ## Referencias
 * Zanaty, E. A. (2018). A Novel Metaheuristic Algorithm based on Fibonacci Sequence. IJCSNS, 18(4), 44.
